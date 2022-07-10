@@ -16,9 +16,17 @@ public class Users {
 	private Long id;
 	private String name;
 	private String email;
-	
+
 	@ManyToMany
 	private Set<Roles> roles;
+
+	public Users() {
+	}
+
+	public Users(String name, String email) {
+		this.name = name;
+		this.email = email;
+	}
 
 	public Long getId() {
 		return id;
@@ -51,6 +59,5 @@ public class Users {
 	public void setRoles(Set<Roles> roles) {
 		this.roles = roles;
 	}
-	
 
 }
