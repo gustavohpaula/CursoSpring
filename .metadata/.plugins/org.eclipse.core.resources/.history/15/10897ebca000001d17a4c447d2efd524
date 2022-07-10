@@ -1,0 +1,16 @@
+package com.example.projeto1.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.projeto1.entity.Users;
+
+@Component 
+public interface UsersRepository extends MongoRepository<Users, Long>{
+	
+	
+	Users findByEmail(String email);
+	
+	Users findByNameIgnoreCase(String name);
+
+}
