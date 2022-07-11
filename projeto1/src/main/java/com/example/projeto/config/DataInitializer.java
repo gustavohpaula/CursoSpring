@@ -20,6 +20,7 @@ public class DataInitializer implements ApplicationListener<ContextRefreshedEven
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 
 		List<Users> users = usersRepository.findAll();
+		
 
 		if (users.isEmpty()) {
 			createUser("Gustavo Henrique", "gustavo@gmail.com");
