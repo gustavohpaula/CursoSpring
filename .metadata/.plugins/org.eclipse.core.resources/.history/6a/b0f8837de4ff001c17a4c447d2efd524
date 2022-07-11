@@ -1,8 +1,0 @@
-package com.example.projeto1.entities;
-
-import javax.persistence.Entity;
-
-@Entity
-public class User {
-
-}
